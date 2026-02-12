@@ -31,11 +31,11 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: npx vite build
+      - run: pnpm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/public
+          path: dist
 
   deploy:
     needs: build
